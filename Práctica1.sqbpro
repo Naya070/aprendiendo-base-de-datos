@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/naya/Descargas/Cursos Python/9. DDBB - Introducci¢n a Base de Datos/Práctica1" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><current_tab id="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="929"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="Productos"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Productos" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk=""><sort/><column_widths/><filter_values/><display_formats/><hidden_columns/><plot_y_axes/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT &quot;Código_A&quot;, &quot;Nombre_A&quot;, &quot;Nombre&quot;, &quot;Nombre_P&quot; FROM ALUMNOS 
+INNER JOIN CARRERAS ON ALUMNOS.Código_A = CARRERAS.Código_C
+INNER JOIN Alumno_Profe ON ALUMNOS.&quot;Código_A&quot; = Alumno_Profe.&quot;Código_A1&quot;
+INNER JOIN PROFESORES ON PROFESORES.Código_P = Alumno_Profe.Código_P1
+</sql><sql name="SQL 1">CREATE TABLE Productos (
+Codigo_P INTEGER,
+Nombre_P VARCHAR(200),
+Precio_P FLOAT,
+PRIMARY KEY (Codigo_P)
+);
+
+CREATE TABLE Clientes (
+Codigo_C INTEGER,
+Nombre_C VARCHAR(200),
+PRIMARY KEY (Codigo_C)
+);
+
+-- Tabla intermedia
+CREATE TABLE Nota_Venta (
+Cantidad INTEGER,
+Subtotal Float,
+Codigo_P1 INTEGER, 
+Codigo_C1 INTEGER
+);
+INSERT INTO Productos VALUES (3, &quot;Lapicero&quot;, 1.60)</sql><current_tab id="1"/></tab_sql></sqlb_project>
